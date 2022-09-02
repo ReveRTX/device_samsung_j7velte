@@ -22,19 +22,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from j7velte device
 $(call inherit-product, device/samsung/j7velte/device.mk)
 
-# Inherit some common Lineage stuff.
+# Inherit from j7velte vendor
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# Boot animation
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := j7velte
+MAGNUS_MAINTAINER := ReveRTX
 PRODUCT_NAME := lineage_j7velte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := Galaxy J7 NXT
 PRODUCT_MANUFACTURER := samsung
 
 TARGET_VENDOR := samsung
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
-
-TARGET_BOOT_ANIMATION_RES := 720
-TARGET_GAPPS_ARCH := arm64
